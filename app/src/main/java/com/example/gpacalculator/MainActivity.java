@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -34,6 +35,13 @@ public class MainActivity extends AppCompatActivity {
 
     public void computeGPA(View view) {
         if (b.getText().equals(getResources().getString(R.string.btn_label))) {
+            if (g1.getText().toString().isEmpty() || g2.getText().toString().isEmpty()
+               || g3.getText().toString().isEmpty() || g4.getText().toString().isEmpty()
+               || g5.getText().toString().isEmpty()) {
+                // if any fields are empty display toast and return
+                Toast.makeText(this, getResources().getString(R.string.toast), Toast.LENGTH_LONG).show();
+                return;
+            }
             // EditViews input types are all numberDecimal, so should not throw exception when parsing
             x1 = Double.parseDouble(g1.getText().toString());
             x2 = Double.parseDouble(g2.getText().toString());

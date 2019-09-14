@@ -7,6 +7,8 @@
     <string name="course3">Course 3:</string>
     <string name="course4">Course 4:</string>
     <string name="course5">Course 5:</string>
-    <string name="hint">"Enter grade"</string>
-    <string name="gpa_display">"GPA: %.2f"</string>
+    <string name="hint">Enter grade</string>
+    <string name="gpa_display">GPA: %.2f</string>
+    <string name="toast">You must enter data into each field to proceed.</string>
+
 </resources>
