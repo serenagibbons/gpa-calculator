@@ -16,6 +16,8 @@ public class MainActivity extends AppCompatActivity {
     ConstraintLayout app;
     Button b;
 
+    double x1, x2, x3, x4, x5;  // course grades
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -32,16 +34,23 @@ public class MainActivity extends AppCompatActivity {
 
     public void computeGPA(View view) {
         if (b.getText().equals(getResources().getString(R.string.btn_label))) {
-            double x1 = Double.parseDouble(g1.getText().toString());
-            double x2 = Double.parseDouble(g2.getText().toString());
-            double x3 = Double.parseDouble(g3.getText().toString());
-            double x4 = Double.parseDouble(g4.getText().toString());
-            double x5 = Double.parseDouble(g5.getText().toString());
+            // EditViews input types are all numberDecimal, so should not throw exception when parsing
+            x1 = Double.parseDouble(g1.getText().toString());
+            x2 = Double.parseDouble(g2.getText().toString());
+            x3 = Double.parseDouble(g3.getText().toString());
+            x4 = Double.parseDouble(g4.getText().toString());
+            x5 = Double.parseDouble(g5.getText().toString());
 
+            inputTest();
+
+            // calculate GPA
             double gpa = (x1 + x2 + x3 + x4 + x5) / 5;
+            // convert gpa to string
             String strGpa = String.format(getResources().getString(R.string.gpa_display), gpa);
+            // display gpa
             display.setText(strGpa);
 
+            // change app background color based on calculated gpa
             if (gpa < 60) {
                 app.setBackgroundColor(getResources().getColor(R.color.red));
             } else if (gpa < 80) {
@@ -50,19 +59,50 @@ public class MainActivity extends AppCompatActivity {
                 app.setBackgroundColor(getResources().getColor(R.color.green));
             }
 
+            // set button label to "clear forms"
             b.setText(getResources().getString(R.string.btn_label2));
         }
         else {
+            // clear all fields
             g1.getText().clear();
             g2.getText().clear();
             g3.getText().clear();
             g4.getText().clear();
             g5.getText().clear();
 
+            // reset background colors
+            g1.setBackgroundColor(getResources().getColor(R.color.white));
+            g2.setBackgroundColor(getResources().getColor(R.color.white));
+            g3.setBackgroundColor(getResources().getColor(R.color.white));
+            g4.setBackgroundColor(getResources().getColor(R.color.white));
+            g5.setBackgroundColor(getResources().getColor(R.color.white));
+
             app.setBackgroundColor(getResources().getColor(R.color.white));
+
+            // clear calculated gpa
             display.setText("");
 
+            // set button label back to "Compute GPA"
             b.setText(getResources().getString(R.string.btn_label));
+        }
+    }
+
+    public void inputTest() {
+        // validate that grade inputs are between 0 and 100
+        if (x1 > 100 || x1 < 0) {
+            g1.setBackgroundColor(getResources().getColor(R.color.red2));
+        }
+        if (x2 > 100 || x2 < 0) {
+            g2.setBackgroundColor(getResources().getColor(R.color.red2));
+        }
+        if (x3 > 100 || x3 < 0) {
+            g3.setBackgroundColor(getResources().getColor(R.color.red2));
+        }
+        if (x4 > 100 || x4 < 0) {
+            g4.setBackgroundColor(getResources().getColor(R.color.red2));
+        }
+        if (x5 > 100 || x5 < 0) {
+            g5.setBackgroundColor(getResources().getColor(R.color.red2));
         }
     }
 }
