@@ -72,76 +72,87 @@
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.724" />
+        app:layout_constraintVertical_bias="0.724"
+        android:onClick="computeGPA"/>
 
     <EditText
         android:id="@+id/grade1"
         android:layout_width="45pt"
-        android:layout_height="wrap_content"
+        android:layout_height="20pt"
+        android:hint="@string/hint"
+        android:importantForAutofill="no"
+        android:inputType="numberDecimal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.53"
         app:layout_constraintStart_toEndOf="@+id/textView"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.355"
-        android:inputType="numberDecimal"
-        android:importantForAutofill="no"
-        android:hint="@string/hint"/>
+        app:layout_constraintVertical_bias="0.355" />
 
     <EditText
         android:id="@+id/grade2"
         android:layout_width="45pt"
-        android:layout_height="wrap_content"
+        android:layout_height="20pt"
+        android:hint="@string/hint"
+        android:importantForAutofill="no"
+        android:inputType="numberDecimal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.53"
         app:layout_constraintStart_toEndOf="@+id/textView"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.415"
-        android:inputType="numberDecimal"
-        android:importantForAutofill="no"
-        android:hint="@string/hint"/>
+        app:layout_constraintVertical_bias="0.415" />
 
     <EditText
         android:id="@+id/grade3"
         android:layout_width="45pt"
-        android:layout_height="wrap_content"
+        android:layout_height="20pt"
+        android:hint="@string/hint"
+        android:importantForAutofill="no"
+        android:inputType="numberDecimal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.53"
         app:layout_constraintStart_toEndOf="@+id/textView"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.475"
-        android:inputType="numberDecimal"
-        android:importantForAutofill="no"
-        android:hint="@string/hint"/>
+        app:layout_constraintVertical_bias="0.475" />
 
     <EditText
         android:id="@+id/grade4"
         android:layout_width="45pt"
-        android:layout_height="wrap_content"
+        android:layout_height="20pt"
+        android:hint="@string/hint"
+        android:importantForAutofill="no"
+        android:inputType="numberDecimal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.53"
         app:layout_constraintStart_toEndOf="@+id/textView"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.535"
-        android:inputType="numberDecimal"
-        android:importantForAutofill="no"
-        android:hint="@string/hint"/>
+        app:layout_constraintVertical_bias="0.535" />
 
     <EditText
         android:id="@+id/grade5"
         android:layout_width="45pt"
-        android:layout_height="wrap_content"
+        android:layout_height="20pt"
+        android:hint="@string/hint"
+        android:importantForAutofill="no"
+        android:inputType="numberDecimal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.53"
         app:layout_constraintStart_toEndOf="@+id/textView"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.595"
-        android:inputType="numberDecimal"
-        android:importantForAutofill="no"
-        android:hint="@string/hint"/>
+        app:layout_constraintVertical_bias="0.595" />
+
+    <TextView
+        android:id="@+id/gpa"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button"
+        app:layout_constraintVertical_bias="0.207" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
