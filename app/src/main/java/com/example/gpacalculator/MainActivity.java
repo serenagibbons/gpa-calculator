@@ -97,20 +97,31 @@ public class MainActivity extends AppCompatActivity {
 
     public void inputTest() {
         // validate that grade inputs are between 0 and 100
+        boolean valid = true;
         if (x1 > 100 || x1 < 0) {
             g1.setBackgroundColor(getResources().getColor(R.color.red2));
+            valid = false;
         }
         if (x2 > 100 || x2 < 0) {
             g2.setBackgroundColor(getResources().getColor(R.color.red2));
+            valid = false;
         }
         if (x3 > 100 || x3 < 0) {
             g3.setBackgroundColor(getResources().getColor(R.color.red2));
+            valid = false;
         }
         if (x4 > 100 || x4 < 0) {
             g4.setBackgroundColor(getResources().getColor(R.color.red2));
+            valid = false;
         }
         if (x5 > 100 || x5 < 0) {
             g5.setBackgroundColor(getResources().getColor(R.color.red2));
+            valid = false;
+        }
+
+        // if any fields have incorrect input, display toast
+        if (!valid) {
+            Toast.makeText(this, getResources().getString(R.string.toast2), Toast.LENGTH_LONG).show();
         }
     }
 }

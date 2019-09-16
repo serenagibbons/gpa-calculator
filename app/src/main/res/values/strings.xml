@@ -10,5 +10,5 @@
     <string name="hint">Enter grade</string>
     <string name="gpa_display">GPA: %.2f</string>
     <string name="toast">You must enter data into each field to proceed.</string>
-
+    <string name="toast2">Invalid data entered. Grades must be between 0 and 100.</string>
 </resources>
