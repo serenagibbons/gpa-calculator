@@ -3,6 +3,7 @@ package com.example.gpacalculator;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.widget.ConstraintLayout;
 
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -79,11 +80,11 @@ public class MainActivity extends AppCompatActivity {
             g5.getText().clear();
 
             // reset background colors
-            g1.setBackgroundColor(getResources().getColor(R.color.white));
-            g2.setBackgroundColor(getResources().getColor(R.color.white));
-            g3.setBackgroundColor(getResources().getColor(R.color.white));
-            g4.setBackgroundColor(getResources().getColor(R.color.white));
-            g5.setBackgroundColor(getResources().getColor(R.color.white));
+            g1.setBackgroundColor(Color.TRANSPARENT);
+            g2.setBackgroundColor(Color.TRANSPARENT);
+            g3.setBackgroundColor(Color.TRANSPARENT);
+            g4.setBackgroundColor(Color.TRANSPARENT);
+            g5.setBackgroundColor(Color.TRANSPARENT);
 
             app.setBackgroundColor(getResources().getColor(R.color.white));
 
